@@ -1,0 +1,9 @@
+# yaml-language-server: $schema=https://v3.wails.io/schemas/template.v3.json
+name: ql_wails3_template
+shortname: ""
+author: "qlstrio"
+description: "A Wails3 desktop app template with a Go backend and a React frontend."
+helpurl: ""
+version: v0.0.1
+wailsVersion: 3
+typescript: true
