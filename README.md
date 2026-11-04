@@ -27,8 +27,11 @@ go install github.com/wailsapp/wails/v3/cmd/wails3@v3.0.0
 
 ```bash
 wails3 init -n myapp -t https://github.com/qlstrio/ql_wails3_react_template
-cd myapp
-wails3 dev
+```
+#### 确保为 Go 代码生成ts绑定
+在build/Taskfile.yml中的generate:bindings任务的cmds中添加-ts参数：
+```yml
+- wails3 generate bindings -f '{{.BUILD_FLAGS}}' -clean=true -time-type=Date{{if eq .OBFUSCATED "true"}} -obfuscated{{end}} -ts
 ```
 
 ## 相关链接
