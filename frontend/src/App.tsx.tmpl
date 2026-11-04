@@ -1,6 +1,7 @@
 import { useState, useEffect, useRef } from 'react'
 import {Events, WML} from "@wailsio/runtime";
 import {GreetService} from "../bindings/{{.ProjectName}}";
+import { Link } from "react-router-dom";
 
 // Show the actual Wails version this project was generated against.
 const wailsVersion = "v3.0.0";
@@ -114,6 +115,7 @@ function App() {
         <span className="toast-label">From Go</span>
         <span aria-label="result" className="toast-msg" ref={resultRef}></span>
       </div>
+        <Link to="/page1">Page 1</Link>
     </>
   )
 }
