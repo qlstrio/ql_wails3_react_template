@@ -1,59 +1,43 @@
-# Welcome to Your New Wails3 Project!
+# ql_wails3_react_template
 
-Congratulations on generating your Wails3 application! This README will guide you through the next steps to get your project up and running.
+一个基于 **Wails3** 的 React + TypeScript 桌面应用开发模板。
 
-## Getting Started
+## 技术栈
 
-1. Navigate to your project directory in the terminal.
+- **Wails3** - Go + Web 技术构建跨平台桌面应用
+- **React 18** - 前端 UI 框架
+- **TypeScript** - 类型安全的 JavaScript 超集
+- **Vite** - 极速的前端构建工具
 
-2. To run your application in development mode, use the following command:
+## 快速开始
 
-   ```
-   wails3 dev
-   ```
+### 环境要求
 
-   This will start your application and enable hot-reloading for both frontend and backend changes.
+- [Go](https://go.dev/dl/) 1.26+
+- [Node.js](https://nodejs.org/) 18+
+- [Wails v3](https://v3.wails.io/) 命令行工具
 
-3. To build your application for production, use:
+安装 Wails v3 CLI：
 
-   ```
-   wails3 build
-   ```
+```bash
+go install github.com/wailsapp/wails/v3/cmd/wails3@v3.0.0
+```
 
-   This will create a production-ready executable in the `build` directory.
+### 使用模板创建项目
 
-## Exploring Wails3 Features
+```bash
+wails3 init -n myapp -t https://github.com/qlstrio/ql_wails3_react_template
+cd myapp
+wails3 dev
+```
 
-Now that you have your project set up, it's time to explore the features that Wails3 offers:
+## 相关链接
 
-1. **Check out the examples**: The best way to learn is by example. Visit the `examples` directory in the `v3/examples` directory to see various sample applications.
+- [Wails v3 官方文档](https://v3.wails.io/)
+- [Wails GitHub](https://github.com/wailsapp/wails)
+- [React 官方文档](https://react.dev/)
+- [Vite 官方文档](https://vitejs.dev/)
 
-2. **Run an example**: To run any of the examples, navigate to the example's directory and use:
+## License
 
-   ```
-   go run .
-   ```
-
-   Note: Some examples may be under development during the alpha phase.
-
-3. **Explore the documentation**: Visit the [Wails3 documentation](https://v3.wails.io/) for in-depth guides and API references.
-
-4. **Join the community**: Have questions or want to share your progress? Join the [Wails Discord](https://discord.gg/JDdSxwjhGf) or visit the [Wails discussions on GitHub](https://github.com/wailsapp/wails/discussions).
-
-## Project Structure
-
-Take a moment to familiarize yourself with your project structure:
-
-- `frontend/`: Contains your frontend code (HTML, CSS, JavaScript/TypeScript)
-- `main.go`: The entry point of your Go backend
-- `app.go`: Define your application structure and methods here
-- `wails.json`: Configuration file for your Wails project
-
-## Next Steps
-
-1. Modify the frontend in the `frontend/` directory to create your desired UI.
-2. Add backend functionality in `main.go`.
-3. Use `wails3 dev` to see your changes in real-time.
-4. When ready, build your application with `wails3 build`.
-
-Happy coding with Wails3! If you encounter any issues or have questions, don't hesitate to consult the documentation or reach out to the Wails community.
+MIT
