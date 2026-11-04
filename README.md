@@ -6,7 +6,9 @@
 
 - **Wails3** - Go + Web 技术构建跨平台桌面应用
 - **React 18** - 前端 UI 框架
+- **React Router v7** - 声明式路由管理
 - **TypeScript** - 类型安全的 JavaScript 超集
+- **Tailwind CSS v4** - 实用优先的 CSS 框架（通过 Vite 插件集成）
 - **Vite** - 极速的前端构建工具
 
 ## 快速开始
