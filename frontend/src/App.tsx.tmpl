@@ -1,6 +1,6 @@
 import { useState, useEffect, useRef } from 'react'
 import {Events, WML} from "@wailsio/runtime";
-import {GreetService} from "../bindings/changeme";
+import {GreetService} from "../bindings/{{.ProjectName}}";
 
 // Show the actual Wails version this project was generated against.
 const wailsVersion = "v3.0.0";
@@ -73,48 +73,48 @@ function App() {
   }, []);
 
   return (
-      <>
-        <main className="container">
-          <header className="brand">
-            <a className="brand-mark" data-wml-openURL="https://v3.wails.io" aria-label="Wails website">
-              <img src="/wails.png" className="brand-logo" alt="Wails logo"/>
-            </a>
-            <a className="brand-badge" data-wml-openURL="https://reactjs.org" aria-label="React">
-              <img src="/react.svg" alt="React logo"/>
-            </a>
-          </header>
+    <>
+      <main className="container">
+        <header className="brand">
+          <a className="brand-mark" data-wml-openURL="https://v3.wails.io" aria-label="Wails website">
+            <img src="/wails.png" className="brand-logo" alt="Wails logo"/>
+          </a>
+          <a className="brand-badge" data-wml-openURL="https://reactjs.org" aria-label="React">
+            <img src="/react.svg" alt="React logo"/>
+          </a>
+        </header>
 
-          <h1 className="title"><span className="title-accent">Wails +</span> <span className="title-name" ref={titleNameRef}><span className="title-name-text">React</span></span></h1>
-          <p className="subtitle">Build beautiful cross-platform apps with Go and React.</p>
+        <h1 className="title"><span className="title-accent">Wails +</span> <span className="title-name" ref={titleNameRef}><span className="title-name-text">React</span></span></h1>
+        <p className="subtitle">Build beautiful cross-platform apps with Go and React.</p>
 
-          <div className="greet">
-            <div className="input-box">
-              <svg className="input-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round" aria-hidden="true"><path d="M20 21v-2a4 4 0 0 0-4-4H8a4 4 0 0 0-4 4v2"/><circle cx="12" cy="7" r="4"/></svg>
-              <input aria-label="input" className="input" value={name} onChange={(e) => setName(e.target.value)} type="text" placeholder="Your name" autoComplete="off"/>
-              <button aria-label="greet-btn" className="btn" onClick={doGreet}>Greet
-                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2.2" strokeLinecap="round" strokeLinejoin="round" aria-hidden="true"><line x1="5" y1="12" x2="19" y2="12"/><polyline points="12 5 19 12 12 19"/></svg>
-              </button>
-            </div>
+        <div className="greet">
+          <div className="input-box">
+            <svg className="input-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round" aria-hidden="true"><path d="M20 21v-2a4 4 0 0 0-4-4H8a4 4 0 0 0-4 4v2"/><circle cx="12" cy="7" r="4"/></svg>
+            <input aria-label="input" className="input" value={name} onChange={(e) => setName(e.target.value)} type="text" placeholder="Your name" autoComplete="off"/>
+            <button aria-label="greet-btn" className="btn" onClick={doGreet}>Greet
+              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2.2" strokeLinecap="round" strokeLinejoin="round" aria-hidden="true"><line x1="5" y1="12" x2="19" y2="12"/><polyline points="12 5 19 12 12 19"/></svg>
+            </button>
           </div>
-        </main>
+        </div>
+      </main>
 
-        <hr className="footer-divider"/>
-        <footer className="footer">
-          <span className="footer-version"><span>{wailsVersion}</span></span>
-          <span className="footer-time">
+      <hr className="footer-divider"/>
+      <footer className="footer">
+        <span className="footer-version"><span>{wailsVersion}</span></span>
+        <span className="footer-time">
           <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round" aria-hidden="true"><circle cx="12" cy="12" r="10"/><polyline points="12 6 12 12 16 14"/></svg>
           <span>{time}</span>
         </span>
-          <a className="footer-docs" data-wml-openURL="https://v3.wails.io" aria-label="Wails documentation">Docs
-            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round" aria-hidden="true"><line x1="7" y1="17" x2="17" y2="7"/><polyline points="7 7 17 7 17 17"/></svg>
-          </a>
-        </footer>
+        <a className="footer-docs" data-wml-openURL="https://v3.wails.io" aria-label="Wails documentation">Docs
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round" aria-hidden="true"><line x1="7" y1="17" x2="17" y2="7"/><polyline points="7 7 17 7 17 17"/></svg>
+        </a>
+      </footer>
 
-        <div className="toast" ref={toastRef} role="status" aria-live="polite">
-          <span className="toast-label">From Go</span>
-          <span aria-label="result" className="toast-msg" ref={resultRef}></span>
-        </div>
-      </>
+      <div className="toast" ref={toastRef} role="status" aria-live="polite">
+        <span className="toast-label">From Go</span>
+        <span aria-label="result" className="toast-msg" ref={resultRef}></span>
+      </div>
+    </>
   )
 }
 

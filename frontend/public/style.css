@@ -36,7 +36,7 @@ html, body {
     color: var(--text);
 }
 body {
-    overflow-x: hidden;
+    overflow: hidden;
     /* Nothing in the chrome is selectable (it's an app, not a document); the
        text input opts back in below. */
     -webkit-user-select: none;
